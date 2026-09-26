@@ -585,7 +585,6 @@ officecdn-microsoft-com.akamaized.net # Office installation / updates
 (\.|^)minecraftservices\.com$ # Minecraft login / profiles
 (\.|^)minecraft-services\.net$ # Minecraft Bedrock services
 (\.|^)mojang\.com$ # Mojang launcher, login, sessions
-minecraft.net # Minecraft (Technitium: incl. subdomains)
 libraries.minecraft.net # Minecraft Java libraries
 resources.download.minecraft.net # Minecraft assets
 minecraftservices.com # Minecraft login / profiles
