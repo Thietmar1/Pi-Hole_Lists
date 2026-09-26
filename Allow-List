@@ -67,7 +67,6 @@ ingest.global-contribute.live-video.net # Twitch Stream-Server Input
 # Bestehende Eintraege / existing entries
 amp-api-edge.apps.apple.com # Needed that Apple Devices works
 amp-api-search-edge.apps.apple.com # Needed that Apple Devices works
-iadsdk.apple.com # Needed that some Apple-Devices works (Achtung: Apple Search Ads SDK / ad attribution)
 sf-api-token-service.itunes.apple.com # needed for iTunes Store to work
 time.apple.com # NTP time sync. The most frequent thing in the log. Just asking the time.
 ocsp2.apple.com # certificate revocation - notarization checks
