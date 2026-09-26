@@ -49,9 +49,25 @@ images-eu.ssl-images-amazon.com # Amazon Images Server
 ingest.global-contribute.live-video.net # Twitch Stream-Server Input
 
 # APPLE
+# Nur Apple-Dienste ohne Tracking. Bewusst NICHT erlaubt (Telemetrie / Analytics / Werbung):
+# Only Apple services without tracking. Intentionally NOT allowed (telemetry / analytics / ads):
+# xp.apple.com, metrics.apple.com, metrics.icloud.com, securemetrics.apple.com, supportmetrics.apple.com,
+# api-adservices.apple.com, advertising.apple.com, bookkeeper.itunes.apple.com, news-events.apple.com,
+# *-analytics-events.apple.com (stocks, weather, notes, books), fbs.smoot.apple.com, pancake.apple.com
+# Niemals apple.com / icloud.com komplett erlauben - Technitium erlaubt sonst alle Subdomains inkl. Tracker.
+# Never allow apple.com / icloud.com as a whole - Technitium would allow all subdomains including trackers.
+^[0-9]+-courier\.push\.apple\.com$ # APNs push notifications
+^p[0-9]+-[a-z0-9-]+\.icloud\.com$ # iCloud services (Contacts, Calendar, Drive, Photos, Notes, ...)
+^p[0-9]+-(imap|smtp)\.mail\.me\.com$ # iCloud Mail
+^gspe?[0-9]+-ssl\.ls\.apple\.com$ # Location Services / Apple Maps tiles and search
+^[a-z0-9-]+\.cdn-apple\.com$ # Apple CDN (software updates, downloads)
+^[a-z0-9-]+\.mzstatic\.com$ # App Store / Apple Music images and assets
+^[a-z0-9-]+\.icloud-content\.com$ # iCloud Drive / Photos file storage
+^[a-z0-9-]+\.ess\.apple\.com$ # iMessage / FaceTime identity services
+# Bestehende Eintraege / existing entries
 amp-api-edge.apps.apple.com # Needed that Apple Devices works
 amp-api-search-edge.apps.apple.com # Needed that Apple Devices works
-iadsdk.apple.com # Needed that some Apple-Devices works
+iadsdk.apple.com # Needed that some Apple-Devices works (Achtung: Apple Search Ads SDK / ad attribution)
 sf-api-token-service.itunes.apple.com # needed for iTunes Store to work
 time.apple.com # NTP time sync. The most frequent thing in the log. Just asking the time.
 ocsp2.apple.com # certificate revocation - notarization checks
@@ -61,6 +77,82 @@ bag.itunes.apple.com # App Store - Media services config
 1-courier.push.apple.com # APNs push notifications. One persistent connection, expected
 gsp-ssl.ls.apple.com # Location Services wifi-location assist
 apple-relay.cloudflare.com # iCloud Private Relay. A privacy feature, not extraction
+# Aktivierung & Einrichtung / Activation & setup
+albert.apple.com # Device activation
+captive.apple.com # Captive portal / internet connectivity check
+gs.apple.com # Activation and software update signing
+humb.apple.com # Device activation
+static.ips.apple.com # Device activation / setup
+sq-device.apple.com # eSIM activation
+tbsc.apple.com # Device activation
+setup.icloud.com # iCloud setup and login
+time-ios.apple.com # NTP time sync iOS
+time-macos.apple.com # NTP time sync macOS
+# Apple ID
+appleid.apple.com # Apple ID
+idmsa.apple.com # Apple ID login
+gsa.apple.com # Apple ID authentication
+appleid.cdn-apple.com # Apple ID login assets
+# Push
+init.push.apple.com # APNs bootstrap
+courier.push.apple.com # APNs push notifications
+# Zertifikate / Certificates
+ocsp.apple.com # Certificate revocation
+crl.apple.com # Certificate revocation lists
+certs.apple.com # Certificates
+valid.apple.com # Certificate validation
+ppq.apple.com # App notarization / Gatekeeper
+# Software Updates
+appldnld.apple.com # Software updates
+configuration.apple.com # Software update configuration
+gg.apple.com # Software update signing
+gnf-mdn.apple.com # Software updates
+gnf-mr.apple.com # Software updates
+ig.apple.com # Software updates
+mesu.apple.com # Software update catalog
+oscdn.apple.com # macOS recovery
+osrecovery.apple.com # macOS recovery
+skl.apple.com # Software updates
+swcdn.apple.com # Software update downloads
+swdist.apple.com # Software update distribution
+swdownload.apple.com # Software update downloads
+swscan.apple.com # Software update catalog
+updates.cdn-apple.com # Software update downloads
+updates-http.cdn-apple.com # Software update downloads
+# App Store & Medien / Media
+apps.apple.com # App Store
+amp-api.apps.apple.com # App Store API
+itunes.apple.com # App Store / iTunes Store
+init.itunes.apple.com # Store configuration
+buy.itunes.apple.com # Purchases and app downloads
+client-api.itunes.apple.com # Store API
+iosapps.itunes.apple.com # iOS app downloads
+osxapps.itunes.apple.com # macOS app downloads
+play.itunes.apple.com # Apple Music / TV playback
+s.mzstatic.com # Store assets
+# iCloud
+www.icloud.com # iCloud website
+gateway.icloud.com # iCloud services gateway
+keyvalueservice.icloud.com # iCloud key-value sync
+fmip.icloud.com # Find My
+fmipmobile.icloud.com # Find My
+imap.mail.me.com # iCloud Mail IMAP
+smtp.mail.me.com # iCloud Mail SMTP
+mask.icloud.com # iCloud Private Relay
+mask-h2.icloud.com # iCloud Private Relay
+mask-api.icloud.com # iCloud Private Relay
+# Karten & Wetter / Maps & Weather
+configuration.ls.apple.com # Location Services configuration
+cdn.apple-mapkit.com # MapKit in apps and websites
+api.apple-mapkit.com # MapKit in apps and websites
+weatherkit.apple.com # Weather app and widgets
+# Webseiten & Content-Caching / Websites & content caching
+www.apple.com # Apple website
+support.apple.com # Apple support
+developer.apple.com # Apple developer
+lcdn-registration.apple.com # Content caching
+suconfig.apple.com # Content caching
+serverstatus.apple.com # Content caching
 
 # ARD - DAS ERSTE
 ard.de
