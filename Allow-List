@@ -64,6 +64,7 @@ ingest.global-contribute.live-video.net # Twitch Stream-Server Input
 ^[a-z0-9-]+\.mzstatic\.com$ # App Store / Apple Music images and assets
 ^[a-z0-9-]+\.icloud-content\.com$ # iCloud Drive / Photos file storage
 ^[a-z0-9-]+\.ess\.apple\.com$ # iMessage / FaceTime identity services
+(\.|^)push\.apple\.com$ # APNs push notifications (all push hosts)
 # Bestehende Eintraege / existing entries
 amp-api-edge.apps.apple.com # Needed that Apple Devices works
 amp-api-search-edge.apps.apple.com # Needed that Apple Devices works
@@ -152,6 +153,10 @@ developer.apple.com # Apple developer
 lcdn-registration.apple.com # Content caching
 suconfig.apple.com # Content caching
 serverstatus.apple.com # Content caching
+push.apple.com # APNs push notifications (Technitium: incl. subdomains)
+gsp10-ssl.apple.com # Apple Maps
+itunes.apple.com.edgekey.net # App Store CDN (Akamai CNAME)
+token.safebrowsing.apple # Safari Safe Browsing (Apple proxy, privacy-preserving)
 
 # ARD - DAS ERSTE
 ard.de
@@ -224,6 +229,8 @@ dhl.de
 www.dhl.de
 
 # EBAY
+(\.|^)ebay\.com$ # eBay international
+ebay.com # eBay international
 i.ebayimg.com # Dont know why blocked
 ir.ebaystatic.com # Dont know why blocked
 mesg.ebay.de # Dont know why blocked
@@ -242,6 +249,8 @@ www.etel-tuning.eu # Dont know why blocked
 
 # GAMING
 # STUFF
+(\.|^)playfabapi\.com$ # Microsoft PlayFab game backend
+playfabapi.com # Microsoft PlayFab game backend
 5107.playfabapi.com # Used for some games
 928f6.playfabapi.com # Used for some games
 # EPIC GAyMES
@@ -316,6 +325,15 @@ bf4.gos.ea.com # Battlefield 4 Gameservice
 sparta-gw-bf4.battlelog.com # Battlefield 4 Gameservice
 eaavatarservice.akamaized.net # Die haesslichen Bildchen
 eaassets-a.akamaihd.net # Bilder im Spiel
+# PLAYSTATION
+(\.|^)playstation\.com$ # PlayStation Network / Store
+(\.|^)playstation\.net$ # PlayStation Network
+(\.|^)playstationnetwork\.com$ # PlayStation Network
+(\.|^)sonyentertainmentnetwork\.com$ # PlayStation Network login
+playstation.com # PlayStation Network / Store
+playstation.net # PlayStation Network
+playstationnetwork.com # PlayStation Network
+sonyentertainmentnetwork.com # PlayStation Network login
 # RIOTGAMES
 www.riotgames.com # Dont know why blocked
 riotgames.com # Sometimes blocked
@@ -333,6 +351,7 @@ alt[0-9]+-mtalk\.google\.com # Used for Voice over Wifi
 mts[0-9]\.google\.com/ # Needed for Google Map Tiles
 khms[0-9]+\.google\.com # Google Maps Satellit Tiles
 ([0-9]+([A-Za-z]+[0-9]+)+)-dnsotls-ds\.metric\.gstatic\.com # DoT-Check
+(\.|^)googlevideo\.com$ # YouTube video streams
 www.google.com # Google Search
 www.google.de # Google for Germoney
 maps.google.de # Google Maps for Germoney
@@ -404,6 +423,7 @@ google.com # Hauptseite bei einigen Filterlisten blockiert
 encrypted-tbn0.gstatic.com # Google Suche Bilder-Anzeige
 streetviewpixels-pa.googleapis.com # Streetview Fotos
 gz0.googleusercontent.com # Google Maps Fotos und Streetview
+googlevideo.com # YouTube video streams (Technitium: incl. subdomains)
 
 # GRAPHENOS
 [A-Za-z0-9]+-dnsotls-ds\.dnscheck\.grapheneos\.org # DNS-over-TLS Check
@@ -426,6 +446,7 @@ www.mirrorservice.org # CDN for Plugins
 
 # LETS ENCRYPT
 (\.|^)lencr\.org$ # Lets Encrypt Server
+(\.|^)api\.letsencrypt\.org$ # Lets Encrypt ACME API
 e1.o.lencr.org # Lets Encrypt Check-Server
 crl.root-x1.letsencrypt.org.edgekey.net # Lets encrypt Check-Servers
 x1.c.lencr.org # Lets Encrypt Servers
@@ -440,6 +461,8 @@ r8.o.lencr.org # Lets Encrypt Server
 r9.o.lencr.org # Lets Encrypt Server
 r10.o.lencr.org # Lets Encrypt Servers
 r11.o.lencr.org # Lets Encrypt Servers
+api.letsencrypt.org # Lets Encrypt ACME API
+acme-v02.api.letsencrypt.org # Lets Encrypt ACME v2 (certificate issuing)
 
 # LG SMART TV
 de.emp.lgsmartplatform.com # LG TV
@@ -461,6 +484,14 @@ imap.gmx.net # GMX Mail
 imap.gmail.com # Google Mail
 
 # MICROSOFT
+(\.|^)xboxlive\.com$ # Xbox Live (login, multiplayer, store)
+(\.|^)xbox\.com$ # Xbox
+(\.|^)gamepass\.com$ # Xbox Game Pass
+(\.|^)clientconfig\.passport\.net$ # Microsoft account login config
+(\.|^)dl\.delivery\.mp\.microsoft\.com$ # Windows / Store downloads
+(\.|^)geo-prod\.do\.dsp\.mp\.microsoft\.com$ # Delivery Optimization
+(\.|^)displaycatalog\.mp\.microsoft\.com$ # Microsoft Store catalog
+(\.|^)ctldl\.windowsupdate\.com$ # Windows Updates Certificate Trust
 ajax.aspnetcdn.com # MS AJAX CDN
 a1843.g1.akamai.net # CDN
 aka.ms # Short URLs by Microsoft
@@ -529,6 +560,41 @@ www.microsoft.com # Evil Company
 c.s-microsoft.com # Fonts for Website
 uhf.microsoft.com # Images for Website
 ov-df.microsoft.com # JavaScript Stuff
+xboxlive.com # Xbox Live (Technitium: incl. subdomains)
+title.mgt.xboxlive.com # Xbox title management
+cert.mgt.xboxlive.com # Xbox certificates
+attestation.xboxlive.com # Xbox device attestation
+def-vef.xboxlive.com # Xbox services
+device.auth.xboxlive.com # Xbox Live login
+title.auth.xboxlive.com # Xbox Live login
+xsts.auth.xboxlive.com # Xbox Live login
+xbox.com # Xbox
+xbox.ipv6.microsoft.com # Xbox IPv6 connectivity
+gamepass.com # Xbox Game Pass
+clientconfig.passport.net # Microsoft account login config
+storeedge.microsoft.com # Microsoft Store
+collections.mp.microsoft.com # Microsoft Store / Xbox game library
+geover.prod.do.dsp.mp.microsoft.com # Delivery Optimization
+geo-prod.do.dsp.mp.microsoft.com # Delivery Optimization
+wcpstatic.microsoft.com # Microsoft website assets
+officecdn.microsoft.com # Office installation / updates
+officecdn-microsoft-com.akamaized.net # Office installation / updates
+
+# MINECRAFT / MOJANG
+(\.|^)minecraft\.net$ # Minecraft
+(\.|^)minecraftservices\.com$ # Minecraft login / profiles
+(\.|^)minecraft-services\.net$ # Minecraft Bedrock services
+(\.|^)mojang\.com$ # Mojang launcher, login, sessions
+libraries.minecraft.net # Minecraft Java libraries
+resources.download.minecraft.net # Minecraft assets
+minecraftservices.com # Minecraft login / profiles
+api.minecraftservices.com # Minecraft login / profiles
+minecraft-services.net # Minecraft Bedrock services
+mojang.com # Mojang
+launcher.mojang.com # Minecraft Launcher
+piston-meta.mojang.com # Minecraft version manifest
+authserver.mojang.com # Minecraft login
+sessionserver.mojang.com # Minecraft multiplayer sessions
 
 # MOZILLA
 archive.mozilla.org # Firefox and Thundbird Update-Server
@@ -545,6 +611,7 @@ tracking-protection.cdn.mozilla.net # Mozilla Tracking Protection
 detectportal.firefox.com # Firefox Captive Portal Check
 push.service.mozilla.com # Push-Dienst wird auch von anderen FOSS-Apps genutzt
 versioncheck-bg.addons.mozilla.org # AddOn Update-Check oder sowas
+push.services.mozilla.com # Firefox push notifications
 
 # NETATMO
 app.netatmo.net
@@ -583,7 +650,16 @@ grpc.chat.signal.org
 updates2.signal.org
 
 # STEAM
+(\.|^)steampowered\.com$ # Steam
+(\.|^)steamstatic\.com$ # Steam CDN
+(\.|^)steamcommunity\.com$ # Steam Community
+(\.|^)steamserver\.net$ # Steam servers
+(\.|^)steamcontent\.com$ # Steam game downloads
 ipv6check-udp.steamserver.net # IPv6 Check
+steampowered.com # Steam (Technitium: incl. subdomains)
+steamstatic.com # Steam CDN
+steamserver.net # Steam servers
+steamcontent.com # Steam game downloads
 steamcommunity.com
 api.steampowered.com
 steamcloud-frf.s3.dualstack.eu-central-1.amazonaws.com # Steam Cloud Sync
@@ -788,3 +864,15 @@ www.coral.ai
 docker.n8n.io
 www.docker.com
 streamlabs.com
+cdn.tailwindcss.com # Tailwind CSS CDN used by many websites
+tailwindcss.com # Tailwind CSS
+hybrid-analysis.com # Malware analysis service (often on malware lists because of its content)
+www.hybrid-analysis.com # Malware analysis service
+jdownloader.org # JDownloader download manager
+feedburner.com # RSS feeds
+feeds.feedburner.com # RSS feeds
+us6.campaign-archive.com # Mailchimp newsletter web view
+www.deutschlandfunk.de # News
+deutschlandfunk.de # News
+www.bild.de # News
+bild.de # News
