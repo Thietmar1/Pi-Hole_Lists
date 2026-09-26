@@ -294,7 +294,6 @@ channel-service.upc.ubi.com # Client
 store-sessions.ecom.ubi.com # Store
 public-ws-ubiservices.ubi.com # Client
 dd.ubisoft.com # Login
-game-status-api.ubisoft.com # Client
 files.cdn.ubisoft.com
 dmx.upc.ubisoft.com # Store
 ecom-cdn.ubi.com # Store
@@ -302,7 +301,6 @@ ubistatic-a.ubisoft.com # Store
 ubistatic2-a.ubisoft.com # Store
 connect.ubisoft.com # Client
 staticctf.ubisoft.com # Store
-ubistatic-a.ubisoft.com # Store
 # €A
 gosca18.ea.com # €A Server
 gosredirector.ea.com # €A Server
@@ -537,7 +535,6 @@ www.bing.com # better use duckduckgo or startpage
 www.msftconnecttest.com # Needed that Windows knows you have internet
 www.xbox.com # Xbox Server
 xnotify.xboxlive.com # Xbox Server to send fried-requests and invites
-slscr.update.microsoft.com # Windows Updates
 static-webservicesops.akamaized.net # Dont know why blocked
 linkedin.com # Needed for Linked Website to work
 www.linkedin.com # Needed for Linked Website to work
@@ -600,7 +597,7 @@ sessionserver.mojang.com # Minecraft multiplayer sessions
 archive.mozilla.org # Firefox and Thundbird Update-Server
 aus5.mozilla.org # Firefox and Thundbird Update-Server
 contile.services.mozilla.com # Mozilla Maps Server
-detectportal.firefox.com # Firefox Update-Check
+detectportal.firefox.com # Firefox Captive Portal Check
 firefox-settings-attachments.cdn.mozilla.net # Needed for Mozilla Account sync
 firefox.settings.services.mozilla.com # Needed for Mozilla Account sync
 ftp.mozilla.org # Update-Server for Firefox and Thunderbird
@@ -608,7 +605,6 @@ live.thunderbird.net # Dont know why blocked
 location.services.mozilla.com # Better than Google Location Service
 www.mozilla.org # Dont know why blocked
 tracking-protection.cdn.mozilla.net # Mozilla Tracking Protection
-detectportal.firefox.com # Firefox Captive Portal Check
 push.service.mozilla.com # Push-Dienst wird auch von anderen FOSS-Apps genutzt
 versioncheck-bg.addons.mozilla.org # AddOn Update-Check oder sowas
 push.services.mozilla.com # Firefox push notifications
@@ -655,7 +651,6 @@ updates2.signal.org
 (\.|^)steamcommunity\.com$ # Steam Community
 (\.|^)steamserver\.net$ # Steam servers
 (\.|^)steamcontent\.com$ # Steam game downloads
-ipv6check-udp.steamserver.net # IPv6 Check
 steampowered.com # Steam (Technitium: incl. subdomains)
 steamstatic.com # Steam CDN
 steamserver.net # Steam servers
@@ -668,8 +663,6 @@ shared.akamai.steamstatic.com # Store Stuff
 steamcommunity-a.akamaihd.net # Store and Community Stuff
 shared.steamstatic.com # Store Stuff
 avatars.akamai.steamstatic.com # Avatar-Server
-store.steampowered.com
-steamcdn-a.akamaihd.net
 p2p-fra1.discovery.steamserver.net
 p2p-fra2.discovery.steamserver.net
 p2p-ams1.discovery.steamserver.net
