@@ -68,7 +68,6 @@ ingest.global-contribute.live-video.net # Twitch Stream-Server Input
 # Bestehende Eintraege / existing entries
 amp-api-edge.apps.apple.com # Needed that Apple Devices works
 amp-api-search-edge.apps.apple.com # Needed that Apple Devices works
-iadsdk.apple.com # Needed that some Apple-Devices works (Achtung: Apple Search Ads SDK / ad attribution)
 sf-api-token-service.itunes.apple.com # needed for iTunes Store to work
 time.apple.com # NTP time sync. The most frequent thing in the log. Just asking the time.
 ocsp2.apple.com # certificate revocation - notarization checks
@@ -548,6 +547,7 @@ static.licdn.com # Needed for Linked Website to work
 minecraft.net # Minecraft Website
 www.minecraft.net # Minecraft Website
 www.minecraft.net-v1.edgesuite.net # Minecraft Website
+authorization.franchise.minecraft-services.net
 fpt.microsoft.com # M$ Login for Xbox
 fpt.live.com # M$ Login for Xbox
 www-xboxab-com.e-0012.e-msedge.net # M$ Login for Xbox
